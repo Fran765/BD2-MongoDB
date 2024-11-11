@@ -65,9 +65,9 @@ public class PostServiceImpl implements PostService {
     public void createPost(PostDTO newPost) {
         this.postRepository.createPost(newPost.getTitle(),
                 newPost.getText(),
-                newPost.getTag(),
+                newPost.getTags(),
                 newPost.getResume(),
-                newPost.getRelatedLinks(),
+                newPost.getRelatedlinks(),
                 newPost.getAuthor(),
                 new Date()
         );

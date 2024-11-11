@@ -14,10 +14,10 @@ public class PostDTO {
     private String title;
     @NotBlank
     private String text;
-    private List<String> tag;
+    private List<String> tags;
     @NotBlank
     private String resume;
-    private List<String> relatedLinks;
+    private List<String> relatedlinks;
     @NotBlank
     private String author;
     private Document date;
@@ -31,9 +31,9 @@ public class PostDTO {
                 ._id(id)
                 .title(docPost.getString("title"))
                 .text(docPost.getString("text"))
-                .tag(docPost.getList("tag", String.class))
+                .tags(docPost.getList("tag", String.class))
                 .resume(docPost.getString("resume"))
-                .relatedLinks(docPost.getList("relatedLinks", String.class))
+                .relatedlinks(docPost.getList("relatedLinks", String.class))
                 .author(docPost.getString("author"))
                 .date(date)
                 .build();

@@ -8,7 +8,7 @@ import org.bson.Document;
 @Getter
 public class ShortPostDTO {
 
-    private Document id;
+    private Document _id;
     private String title;
     private String resume;
 
@@ -17,7 +17,7 @@ public class ShortPostDTO {
         Document id = new Document("$oid", docPost.getObjectId("_id").toHexString());
 
         return ShortPostDTO.builder()
-                .id(id)
+                ._id(id)
                 .title(docPost.getString("title"))
                 .resume(docPost.getString("resume"))
                 .build();

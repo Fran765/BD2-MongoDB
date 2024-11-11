@@ -25,11 +25,6 @@ public class PageRepository {
 
             Document document = collection.find(Filters.eq("_id", new ObjectId(id))).first();
 
-            /*if (document != null) {
-                document.put("_id", new Document("$oid", document.getObjectId("_id").toHexString()));
-                document.put("date", new Document("$date", document.getDate("date")));
-            }*/
-
             pageDoc.set(document);
 
         });
