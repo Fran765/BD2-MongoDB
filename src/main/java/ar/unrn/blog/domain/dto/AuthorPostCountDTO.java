@@ -12,7 +12,7 @@ public class AuthorPostCountDTO {
 
     public static AuthorPostCountDTO fromDocument(Document doc){
         return AuthorPostCountDTO.builder()
-                ._id(doc.getString("author"))
+                ._id(doc.getString("_id"))
                 .count(doc.getInteger("count"))
                 .build();
     }
