@@ -68,10 +68,9 @@ public class PostRepository {
 
         this.mongoService.executeWithMongo(COLLECTION_NAME, collection -> {
             /*
-            * TODO: ¿Debo crear un indice por campo del post o solo del text?
-            *  verificar creacion del indice
-            *  */
-            collection.createIndex(Indexes.text("text"));
+            * TODO: se cambio la creacion del indice a la clase MongoInitializer
+            * collection.createIndex(Indexes.text("text"));
+            * */
 
             collection.find(Filters.text(text)).into(result);
         });
